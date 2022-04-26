@@ -1,9 +1,11 @@
 <script setup>
-import Index from './components/Index.vue'
 </script>
 
 <template>
-  <Index msg="Hello Vue 3 + Vite" />
+  <router-link to="/">首页</router-link>
+  <router-link to="/about">关于</router-link>
+  <router-link to="/user">用户</router-link>
+  <router-view />
 </template>
 
 <style>

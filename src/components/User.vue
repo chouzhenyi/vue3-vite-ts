@@ -1,11 +1,11 @@
 <script setup>
 import { ref } from 'vue'
-
-const title = ref('首页');
+const name = ref('用户');
+console.log(this);
 </script>
 
 <template>
-  <h1>{{ title }}</h1>
+  <h1>{{ name }}</h1>
 </template>
 
 <style scoped>
