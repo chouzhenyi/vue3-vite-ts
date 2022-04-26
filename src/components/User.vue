@@ -1,11 +1,19 @@
 <script setup>
-import { ref } from 'vue'
+import { ref } from 'vue';
+import router from '@/router/index.js';
 const name = ref('用户');
-console.log(this);
+const goUpload = () => {
+    router.push({
+        name: 'Upload'
+    });
+};
 </script>
 
 <template>
-  <h1>{{ name }}</h1>
+  <div>
+    <h1>{{ name }}</h1>
+    <input type="button" value="去上传" @click="goUpload">
+  </div>
 </template>
 
 <style scoped>
