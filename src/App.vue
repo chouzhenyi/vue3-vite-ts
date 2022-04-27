@@ -1,4 +1,12 @@
 <script setup>
+  import { useRoute } from 'vue-router';
+  import { watchEffect } from 'vue';
+  const $route = useRoute();
+  console.log($route, 'app');
+  watchEffect(() => {
+    console.log($route.name);
+  })
+
 </script>
 
 <template>

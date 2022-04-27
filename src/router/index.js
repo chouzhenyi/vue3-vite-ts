@@ -58,6 +58,7 @@ router.beforeEach((to, from, next) => {
     }
 });
 router.beforeResolve((to, from, next) => {
+    console.log(to, from, 'resolve');
     if(to.name === 'Upload' && from.name !== 'User') {
         next(false);
     } else {
