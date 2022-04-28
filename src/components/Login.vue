@@ -1,6 +1,7 @@
 <script setup>
 import { ref } from 'vue'
 const name = ref('登录');
+localStorage.setItem('userInfo', 1)
 </script>
 
 <template>

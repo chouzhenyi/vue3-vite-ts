@@ -1,7 +1,15 @@
-<script setup>
+<script>
+import { Vue } from "vue-class-component";
 import { ref } from 'vue'
 
-const title = ref('首页');
+export default class App extends Vue {
+  setup() {
+    const title = ref('首页');
+    return {
+      title
+    }
+  }
+}
 </script>
 
 <template>
