@@ -1,7 +1,6 @@
 import { createRouter, createWebHashHistory } from "vue-router";
 import index from "@/components/index.vue";
 import Login from "@/components/Login.vue";
-import { sendToAnalytics } from "@/js/utils/tools.js";
 
 const routes = [
     { path: "/", name: "Index", component: index },
@@ -64,11 +63,7 @@ router.beforeResolve((to, from, next) => {
         next();
     }
 })
-router.afterEach((to, from) => {
-    sendToAnalytics({
-        to,
-        from,
-    });
-})
+// router.afterEach((to, from) => {
+// })
 
 export default router;

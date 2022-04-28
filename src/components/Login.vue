@@ -1,8 +1,6 @@
 <script setup>
 import { ref } from 'vue'
-import { randomStr } from '@/js/utils/tools.js';
 const name = ref('登录');
-localStorage.setItem('userInfo', randomStr);
 </script>
 
 <template>
