@@ -1,10 +1,16 @@
 <script setup>
   import { useRoute } from 'vue-router';
   import { watchEffect } from 'vue';
+  import { useI18n } from 'vue-i18n';
+  const { locale } = useI18n();
+  const changeLang = () => { locale.value = locale.value == 'zh' ? 'en' : 'zh'  }
   const $route = useRoute();
-  console.log($route, 'app');
   watchEffect(() => {
-    console.log($route.name);
+    // 获取当前路由名称
+    const { name } = $route;
+    if(name) {
+      console.log('当前路由：', name);
+    }
   })
 
 </script>
@@ -16,6 +22,7 @@
       <router-link to="/about">关于</router-link>
       <router-link to="/user">用户</router-link>
       <router-link to="/logout">登出</router-link>
+      <div @click="changeLang">切换语言</div>
     </div>
     <router-view class="view" />
   </div>
