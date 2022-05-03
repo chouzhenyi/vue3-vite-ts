@@ -8,10 +8,10 @@ const forStr = (num: number):string => {
   return `${num}`;
 }
 const forAdd = () => {
-    const results = add([1, 2, 3]);
-    const strResults: string = forStr(results);
-    console.log(strResults, typeof strResults);
-  }
+  const results = add([1, 2, 3]);
+  const strResults: string = forStr(results);
+  console.log(strResults, typeof strResults);
+}
 </script>
 
 <template>

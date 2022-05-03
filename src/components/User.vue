@@ -1,6 +1,7 @@
 <script setup>
 import { ref, inject, watch, reactive } from 'vue';
 import router from '@/router/index.js';
+
 const name = ref('用户');
 const goUpload = () => {
     router.push({
@@ -24,7 +25,6 @@ const changeWatch = () => {
 const person = reactive({
   name: 'wone'
 });
-
 </script>
 <script>
 import { defineComponent } from 'vue'
