@@ -1,18 +1,7 @@
 <template>
-<div class="wrapper">
-  <div class="tab-wrapper">
-    <div class="tab-item" @click="tabClick('Index')">首页</div>
-    <div class="tab-item" @click="tabClick('User')">用户页</div>
-    <div class="tab-item" @click="tabClick('About')">关于</div>
-    <div class="tab-item" @click="tabClick('Logout')">登出</div>
-    <div>
-      <van-sidebar v-model="langActive" @change="changeLang">
-        <van-sidebar-item :title="item.title" v-for="(item, index) in langs" :key="index" />
-      </van-sidebar>
-    </div>
-  </div>
+<van-config-provider :theme-vars="themeVars">
   <router-view class="main" />
-</div>
+</van-config-provider>
 </template>
 
 <script lang="ts">
@@ -50,36 +39,37 @@ export default class App extends Vue {
       I18n.global.locale = 'zh'
     }
   }
+  themeVars = {
+    navBarHeight: '50px',
+    navBarBackgroundColor: 'transparent',
+  }
 }
 </script>
 
-<style>
+<style lang="scss">
+@import '@/style/colors.scss';
+@import '@/style/base.scss';
 *{
   padding: 0;
   margin: 0;
   outline: none;
+  box-sizing: border-box;
+}
+html, body {
+  height: 100%;
+  font-size: 75px;
 }
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: #333;
-}
-.wrapper {
-  display: flex;
-}
-.tab-wrapper {
-  width: 200px;
-  line-height: 30px;
-  text-align: center;
-}
-.tab-wrapper .tab-item {
-  background: #639ef4;
-  border-bottom: 1px solid #eee;
-  cursor: pointer;
-  color: #fff;
+  height: 100%;
+  background-color: $gray-f7;
 }
 .main {
   flex: 1;
+  height: 100%;
+  background-color: $gray-f7;
 }
 </style>
