@@ -16,6 +16,8 @@ import {
     ConfigProvider,
     Grid,
     GridItem,
+    Tabbar,
+    TabbarItem,
 } from 'vant';
 
 const app = createApp(App);
@@ -33,5 +35,7 @@ app.use(ActionBarButton);
 app.use(ConfigProvider);
 app.use(Grid);
 app.use(GridItem);
+app.use(Tabbar);
+app.use(TabbarItem);
 
 app.mount('#app');

@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { ref } from "vue";
+import { reactive, ref, toRefs } from "vue";
 import { $t } from '@/js/plugins/i18n'
 import { useRouter } from 'vue-router'
 import logoVue from "@/components/static/logo.vue";
@@ -24,6 +24,21 @@ const loading = ref(false);
 const onRefresh = () => {
   loading.value = false
 };
+// 底部tabbar
+const indexData = reactive({
+  preCatchCount: 10, // 准备fou的商品数量
+});
+const { preCatchCount } = toRefs(indexData)
+const onFooterChange = (val: number) => {
+  switch(val) {
+    case 1:
+      $router.push({name: 'Buycar'});
+      break;
+    case 2:
+      $router.push({name: 'User'});
+      break;
+  }
+};
 </script>
 
 <template>
@@ -44,10 +59,19 @@ const onRefresh = () => {
     <div class="container">
       <div class="grid-nav">
         <van-grid :column-num="4" :gutter="10">
-          <van-grid-item v-for="value in 8" :key="value" icon="photo-o" text="文字" />
+          <van-grid-item v-for="(value, index) in 8" :key="value" icon="photo-o" text="文字" />
         </van-grid>
       </div>
     </div>
+    <van-tabbar @change="onFooterChange">
+      <van-tabbar-item>
+        <logo-vue :size="46" :type="0" />
+      </van-tabbar-item>
+      <van-tabbar-item icon="shopping-cart-o" :badge="preCatchCount ? preCatchCount : ''">
+        {{$t('common.prefou')}}
+      </van-tabbar-item>
+      <van-tabbar-item icon="user-circle-o">{{$t('common.userCenter')}}</van-tabbar-item>
+    </van-tabbar>
   </div>
 </template>
 
@@ -55,7 +79,8 @@ const onRefresh = () => {
 @import '@/style/base.scss';
 @import '@/style/colors.scss';
 .container {
-  height: 100%;
+  height: calc(100% - 50px);
+  @include over-y-auto;
   .grid-nav {
     margin: px2rem(10px);
     background-color: $white;

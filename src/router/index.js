@@ -35,6 +35,11 @@ const routes = [
         name: "Upload",
         component: () => import("@/views/Upload.vue"),
     },
+    {
+        path: "/buycar",
+        name: "Buycar",
+        component: () => import("@/views/BuyCar.vue"),
+    },
 ];
   
 const router = createRouter({

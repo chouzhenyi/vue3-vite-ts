@@ -1,5 +1,5 @@
 @function px2rem($px, $base-font-size: 75px) {
-    @return ($px / $base-font-size) * 1rem;
+    @return calc($px/$base-font-size) * 1rem;
 }
 @mixin flex {
     display: flex;
@@ -23,4 +23,10 @@
 }
 @mixin font-weight-500 {
     font-weight: 500;
+}
+@mixin over-hidden {
+    overflow: hidden;
+}
+@mixin over-y-auto {
+    overflow-y: auto;
 }

@@ -2,6 +2,8 @@ export default {
     common: {
         back: 'Back',
         search: 'Search',
+        prefou: 'Prepare Catch',
+        userCenter: 'User',
     },
     msg: 'message',
     homepage: 'Homepage',
@@ -10,6 +12,7 @@ export default {
     upload: 'Upload',
     login: 'Login',
     logout: 'Logout',
+    buycar: 'buycar',
     index: {
         searchTips: 'Find Prey',
         sign: 'Sign',

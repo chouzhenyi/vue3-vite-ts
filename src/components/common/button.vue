@@ -3,7 +3,7 @@
 </template>
 
 <script>
-import { computed, reactive, ref, toRefs, defineProps } from 'vue';
+import { computed, reactive, ref, toRefs } from 'vue';
 
 export default {
     data() {

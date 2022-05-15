@@ -6,7 +6,7 @@
 </template>
 
 <script lang="ts" setup>
-import { defineProps, reactive, ref } from 'vue'
+import { reactive } from 'vue'
 const props = defineProps({
   size: Number,
   type: Number,

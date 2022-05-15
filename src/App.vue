@@ -1,5 +1,5 @@
 <template>
-<van-config-provider :theme-vars="themeVars">
+<van-config-provider :theme-vars="themeVars" class="provider-wrapper">
   <router-view class="main" />
 </van-config-provider>
 </template>
@@ -66,10 +66,12 @@ html, body {
   color: #333;
   height: 100%;
   background-color: $gray-f7;
-}
-.main {
-  flex: 1;
-  height: 100%;
-  background-color: $gray-f7;
+  .provider-wrapper {
+    height: 100%;
+    .main {
+      height: 100%;
+      background-color: $gray-f7;
+    }
+  }
 }
 </style>
