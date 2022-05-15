@@ -42,16 +42,25 @@ const onRefresh = () => {
       </template>
     </van-nav-bar>
     <div class="container">
-      <van-pull-refresh v-model="loading" @refresh="onRefresh">
-        
-      </van-pull-refresh>
+      <div class="grid-nav">
+        <van-grid :column-num="4" :gutter="10">
+          <van-grid-item v-for="value in 8" :key="value" icon="photo-o" text="文字" />
+        </van-grid>
+      </div>
     </div>
   </div>
 </template>
 
 <style lang="scss" scoped>
 @import '@/style/base.scss';
+@import '@/style/colors.scss';
 .container {
   height: 100%;
+  .grid-nav {
+    margin: px2rem(10px);
+    background-color: $white;
+    border-radius: px2rem(6px);
+    padding: px2rem(10px) 0;
+  }
 }
 </style>

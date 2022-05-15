@@ -14,6 +14,8 @@ import {
     ActionBarIcon,
     ActionBarButton,
     ConfigProvider,
+    Grid,
+    GridItem,
 } from 'vant';
 
 const app = createApp(App);
@@ -29,5 +31,7 @@ app.use(ActionBar);
 app.use(ActionBarIcon);
 app.use(ActionBarButton);
 app.use(ConfigProvider);
+app.use(Grid);
+app.use(GridItem);
 
 app.mount('#app');
