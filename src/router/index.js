@@ -1,18 +1,18 @@
 import { createRouter, createWebHashHistory } from "vue-router";
-import index from "@/components/index.vue";
-import Login from "@/components/Login.vue";
+import index from "@/views/Index.vue";
+import Login from "@/views/Login.vue";
 
 const routes = [
     { path: "/", name: "Index", component: index },
     {
         path: "/about",
         name: "About",
-        component: () => import("@/components/About.vue"),
+        component: () => import("@/views/About.vue"),
     },
     {
         path: "/user",
         name: "User",
-        component: () => import("@/components/User.vue"),
+        component: () => import("@/views/User.vue"),
     },
     {
         path: "/login",
@@ -28,12 +28,12 @@ const routes = [
     {
         path: "/logout",
         name: "Logout",
-        component: () => import("@/components/Logout.vue"),
+        component: () => import("@/views/Logout.vue"),
     },
     {
         path: "/upload",
         name: "Upload",
-        component: () => import("@/components/Upload.vue"),
+        component: () => import("@/views/Upload.vue"),
     },
 ];
   

@@ -1,11 +1,12 @@
 <script setup>
 import { ref } from 'vue'
-const name = ref('登录');
+import { $t } from '@/js/plugins/i18n'
+const title = ref($t('login'));
 localStorage.setItem('userInfo', 1)
 </script>
 
 <template>
-  <h1>{{ name }}</h1>
+  <h1>{{ title }}</h1>
 </template>
 
 <style scoped>

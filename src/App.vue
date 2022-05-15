@@ -9,7 +9,6 @@
       <van-sidebar v-model="langActive" @change="changeLang">
         <van-sidebar-item :title="item.title" v-for="(item, index) in langs" :key="index" />
       </van-sidebar>
-      <div>{{langObj.val}} || {{}}</div>
     </div>
   </div>
   <router-view class="main" />
@@ -18,12 +17,12 @@
 
 <script lang="ts">
 import { Vue } from 'vue-class-component';
-import { reactive, toRefs } from 'vue'
 import {
   Locale,
 } from 'vant';
 import enUS from 'vant/es/locale/lang/en-US'
 import zhCN from 'vant/es/locale/lang/zh-CN'
+import I18n from '@/js/plugins/i18n'
 
 export default class App extends Vue {
   langActive = 1
@@ -42,19 +41,14 @@ export default class App extends Vue {
       name,
     });
   }
-  langObj = reactive({
-    val: '666'
-  });
   changeLang() {
     if (this.langActive === 0) {
       Locale.use('en-US', enUS);
+      I18n.global.locale = 'en'
     } else {
       Locale.use('zh-CN', zhCN);
+      I18n.global.locale = 'zh'
     }
-    const langObjRefs = toRefs(this.langObj);
-    const { val } = langObjRefs;
-    val.value = '123'
-    
   }
 }
 </script>

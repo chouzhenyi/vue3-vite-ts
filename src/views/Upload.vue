@@ -1,10 +1,8 @@
 <script setup>
-import { onBeforeRouteLeave, onBeforeRouteUpdate, useRouter, useRoute } from "vue-router";
+import { onBeforeRouteLeave, onBeforeRouteUpdate } from "vue-router";
 import { ref } from 'vue';
-const title = ref('上传');
-
-const $router = useRouter();
-const $route = useRoute();
+import { $t } from '@/js/plugins/i18n'
+const title = ref($t('upload'));
 
 onBeforeRouteLeave(() => {
   console.log('Upload组件，离开路由');
@@ -12,17 +10,6 @@ onBeforeRouteLeave(() => {
 onBeforeRouteUpdate(() => {
   console.log('Upload组件，更新路由');
 });
-let index = 0;
-const routeClick = () => {
-  index++;
-  $router.replace({
-    name: 'Upload',
-    query: {
-      name: `名称${index}`
-    }
-  });
-  console.log($route.path);
-};
 </script>
 <script>
 import { defineComponent } from 'vue'
@@ -44,7 +31,6 @@ export default defineComponent({
 <template>
   <div>
     <h1>{{ title }}</h1>
-    <input type="button" value="更新路由" @click="routeClick" />
   </div>
 </template>
 
