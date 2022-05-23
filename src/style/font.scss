@@ -2,18 +2,36 @@
 @mixin font12 {
     font-size: px2rem(12px);
 }
+.font12 {
+    @include font12;
+}
 @mixin font14 {
     font-size: px2rem(14px);
+}
+.font14 {
+    @include font14;
 }
 @mixin font16 {
     font-size: px2rem(16px);
 }
+.font16 {
+    @include font16;
+}
 @mixin font18 {
     font-size: px2rem(18px);
+}
+.font18 {
+    @include font18;
 }
 @mixin font20 {
     font-size: px2rem(20px);
 }
+.font20 {
+    @include font20;
+}
 @mixin font24 {
-    font-size: px2rem(24);
+    font-size: px2rem(24px);
+}
+.font24 {
+    @include font24;
 }

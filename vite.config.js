@@ -14,6 +14,8 @@ export default defineConfig({
     alias: {
       '@': path.resolve(__dirname, './src'),
       'vue-i18n': 'vue-i18n/dist/vue-i18n.cjs.js',
+      'request': path.resolve(__dirname, './src/js/utils/request.js'),
+      'api': path.resolve(__dirname, './src/js/api'),
     },
   },
   server: {
