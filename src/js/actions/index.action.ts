@@ -5,15 +5,17 @@ export interface ADItem {
     src: string,
 }
 
-export class ADItemFrag {
+export class ADItemFrag implements ADItem {
     id: number = 0
     title: string = ''
     link: string = ''
+    src: string = '';
     constructor(params: ADItem) {
-        const { id, title, link } = params;
+        const { id, title, link, src } = params;
         this.id = id;
         this.title = title
         this.link = link
+        this.src = src;
     }
 }
 

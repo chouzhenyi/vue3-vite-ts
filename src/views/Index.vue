@@ -142,7 +142,7 @@ renderADLinks();
     border-radius: px2rem(6px);
     padding: px2rem(10px) 0;
     .grid-item-image {
-      width: px2rem(60px);
+      width: px2rem(30px);
     }
   }
   .products {
