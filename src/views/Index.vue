@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { reactive, ref, toRefs } from "vue";
+import { reactive, ref, toRefs, watchEffect } from "vue";
 import { mobileIndexData } from "@/js/api/shop";
 import { $t } from '@/js/plugins/i18n'
 import { useRouter } from 'vue-router'
@@ -8,6 +8,7 @@ import searchVue from "@/views/components/index/search.vue";
 import signVue from "@/views/components/index/sign.vue"
 import ProductItem from "@/views/components/index/ProductItem.vue"
 import { adDataList } from "@/js/actions/index.action"
+import { runner } from "@/js/runner";
 
 // 首页
 const title = ref($t('homepage'));
@@ -82,10 +83,30 @@ const renderADLinks = () => {
   adDataList.forEach((item) => {
     indexData.ads.push(renderADItem(item));
   })
-  console.log(indexData);
-  
+  // console.log(indexData);
 }
 renderADLinks();
+
+const musicCount = ref(0);
+const musicNum = ref(0);
+const effect = watchEffect(oninvalidate => {
+  musicNum.value = musicCount.value * 10;
+  oninvalidate(() => {
+    console.log('副作用');
+  })
+}, {
+  flush: 'post', // 'pre' | 'sync' | 'post'
+  onTrigger: () => {
+    // 更改时触发
+    console.log('更改时监听');
+  },
+  onTrack: () => {
+    // 被使用时触发
+    console.log('使用时监听');
+  }
+})
+// 测试专用方法
+runner();
 </script>
 
 <template>
