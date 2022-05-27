@@ -16,4 +16,9 @@ export const runner = () => {
     type Writable<T> = {
         -readonly [P in keyof T]: T[P];
     };
+
+    type info<T> = T extends {name: infer K, count: infer V} ? { name: K, count: V } : never;
+    const pama: info<{name: string, count: number}> = { name: '', count: 0 }
+    console.log(pama);
+    
 };
