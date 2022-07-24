@@ -18,4 +18,4 @@ jobs:
       - run: echo "🍏 This job's status is ${{ job.status }}."
       - name: build
         run: |
-          npm install
+          npm run build
