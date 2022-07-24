@@ -1,7 +1,7 @@
 import request from '../utils/request'
 
 export const mobileIndexData = () => {
-    const url = '/static/json/taobao.json'
+    const url = '/json/taobao.json'
     return request.get(url).then((res: any) => {
         const result = res.model?.result || {};
         const { recommedResult } = result;

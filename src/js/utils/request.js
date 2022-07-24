@@ -5,7 +5,7 @@ let cancelTokenCancel = null;
 axios.defaults.withCredentials = true;
 
 const instance = axios.create({
-    baseURL: 'http://192.168.1.102:10110',
+    baseURL: '',
     timeout: 6000,
     cancelToken: new CancelToken(function executor(c) {
         // executor 函数接收一个 cancel 函数作为参数
