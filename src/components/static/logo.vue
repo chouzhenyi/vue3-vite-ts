@@ -1,7 +1,7 @@
 <template>
   <div class="logo-wrapper" :style="{ width: style.with, height: style.height }">
-    <img src="fou.png" alt="fou" v-if="type === 0">
-    <img src="fou.trans.png" alt="fou" v-if="type === 1">
+    <img src="/fou.png" alt="fou" v-if="type === 0">
+    <img src="/fou.trans.png" alt="fou" v-if="type === 1">
   </div>
 </template>
 
