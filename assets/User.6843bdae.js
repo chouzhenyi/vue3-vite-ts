@@ -1,0 +1,1 @@
+import{d as t,r as a,$ as s,o as n,c as o,a as r,t as c}from"./index.4a00ef4e.js";const l=t({created(){}}),d=Object.assign(l,{setup(_){const e=a(s("user"));return(u,i)=>(n(),o("div",null,[r("h1",null,c(e.value),1)]))}});export{d as default};
