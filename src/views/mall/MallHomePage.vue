@@ -2,10 +2,41 @@
 import { ShoppingCartOutlined, UserOutlined } from "@ant-design/icons-vue";
 import LogoIcon from "@/components/icons/LogoIcon.vue";
 import { mobileIndexData } from "@/scripts/api/shop";
+import { adDataList } from "@/scripts/actions/index.action";
 import ProductItem from "./components/ProductItem.vue";
+import SearchProduct from "./components/SearchProduct.vue";
+import GoSign from "./components/GoSign.vue";
 import { ref } from "vue";
 import type { Ref } from "vue";
+import { useRouter } from "vue-router";
 
+// 头部搜索、签到button
+const $router = useRouter();
+const checkSign = () => {
+  console.log("去签到");
+};
+const checkSearch = () => {
+  console.log("去搜索");
+};
+// 广告导航
+const ads: Ref<any[]> = ref([]);
+const renderADItem = (params: any) => {
+  const { id, title, link, src } = params;
+  const item = {
+    id,
+    title,
+    link,
+    src,
+  };
+  return item;
+};
+const renderADLinks = () => {
+  adDataList.forEach((item) => {
+    ads.value.push(renderADItem(item));
+  });
+};
+renderADLinks();
+// 商品列表
 const items: Ref<any[]> = ref([]);
 mobileIndexData().then((res) => {
   const { list } = res;
@@ -14,6 +45,17 @@ mobileIndexData().then((res) => {
 </script>
 <template>
   <div>
+    <div class="header">
+      <LogoIcon :size="46" :type="1" />
+      <SearchProduct @click="checkSearch" class="search" />
+      <GoSign @click="checkSign" class="left-search" />
+    </div>
+    <div class="nav-wrapper">
+      <div v-for="(item, index) in ads" :key="index" class="nav-item">
+        <img :src="item.src" :alt="item.title" class="grid-item-image" />
+        <div class="font12">{{ item.title }}</div>
+      </div>
+    </div>
     <div class="container">
       <a-row :wrap="true" :gutter="[10, 10]">
         <a-col v-for="(item, index) in items" :key="index" :span="12">
@@ -42,6 +84,35 @@ mobileIndexData().then((res) => {
 </template>
 <style lang="less" scoped>
 @import "@/styles/calculation.less";
+@import "@/styles/font.less";
+.header {
+  width: 100%;
+  padding: 0 10px;
+  background-color: var(--vt-c-white);
+  display: flex;
+  .search {
+    flex: 1;
+  }
+  .left-search {
+    width: 40px;
+    margin-left: 10px;
+  }
+}
+.nav-wrapper {
+  display: grid;
+  grid-template-columns: repeat(5, 20%);
+  margin: 10px;
+  padding: 10px 0;
+  background-color: #fff;
+  border-radius: 8px;
+  text-align: center;
+  .font12();
+  .nav-item {
+    img {
+      width: 90%;
+    }
+  }
+}
 .container {
   padding: 10px;
 }
