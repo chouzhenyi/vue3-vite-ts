@@ -1,0 +1,34 @@
+@default-font-size: 14;
+.px2rem(@px, @font-size: @default-font-size) {
+  @var: (@px / @font-size);
+  @rem: ~"@{var}rem";
+}
+.flex {
+    display: flex;
+}
+.flex-center {
+    .flex();
+    align-items: center;
+    justify-content: center;
+}
+.flex-row-center {
+    .flex();
+    justify-content: center;
+}
+.flex-column-center {
+    .flex();
+    align-items: center;
+}
+
+.font-weight-400 {
+    font-weight: 400;
+}
+.font-weight-500 {
+    font-weight: 500;
+}
+.over-hidden {
+    overflow: hidden;
+}
+.over-y-auto {
+    overflow-y: auto;
+}

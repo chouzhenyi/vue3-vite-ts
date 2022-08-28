@@ -1,0 +1,167 @@
+{
+  "data": {
+    "stage": [
+      {
+        "id": "001",
+        "name": "小学招生范围",
+        "type": "primary school",
+        "rangeDetail": "济宁路以北、菏泽路以南、西二路以西、西三路以东；南一路以北、济宁路以南、燕山路以西、西三路以东及南里社区、宁河小区、祥和小区、滨海花苑小区。",
+        "rangeList": [
+          {
+            "id": "00101",
+            "name": "area_01",
+            "desc": "济宁路以北、菏泽路以南、西二路以西、西三路以东",
+            "community": [
+              {
+                "id": "0010101",
+                "name": "兴河北区",
+                "desc": "济宁路11号,近燕山路491号。",
+                "unitPrice": "5164",
+                "link": "https://dongying.anjuke.com/community/view/1091331",
+                "HouseTypes": [
+                  {
+                    "name": "2室1厅1厨1卫",
+                    "measure": "60",
+                    "orientation": "南北通透"
+                  },
+                  {
+                    "name": "3室2厅1厨1卫",
+                    "measure": "70",
+                    "orientation": "南北通透"
+                  },
+                  {
+                    "name": "2室1厅1厨1卫",
+                    "measure": "100",
+                    "orientation": "全阳"
+                  }
+                ],
+                "feature": ["距离五十九中最近的小区"],
+                "info": [
+                  {
+                    "label": { "labelType": "", "labelText": "物业类型" },
+                    "value": "公寓住宅"
+                  },
+                  {
+                    "label": { "labelType": "", "labelText": "权属类别" },
+                    "value": "商品房住宅"
+                  },
+                  {
+                    "label": { "labelType": "", "labelText": "竣工时间" },
+                    "value": "2000年"
+                  },
+                  {
+                    "label": { "labelType": "", "labelText": "产权年限" },
+                    "value": "70年"
+                  },
+                  {
+                    "label": { "labelType": "", "labelText": "总户数" },
+                    "value": "1450户"
+                  },
+                  {
+                    "label": { "labelType": "", "labelText": "总建面积" },
+                    "value": "暂无"
+                  },
+                  {
+                    "label": { "labelType": "", "labelText": "容积率" },
+                    "value": "2.50"
+                  },
+                  {
+                    "label": { "labelType": "", "labelText": "绿化率" },
+                    "value": "30.0%"
+                  },
+                  {
+                    "label": { "labelType": "", "labelText": "建筑类型" },
+                    "value": "高层"
+                  },
+                  {
+                    "label": { "labelType": "", "labelText": "所属商圈" },
+                    "value": "西城"
+                  },
+                  {
+                    "label": { "labelType": "", "labelText": "统一供暖" },
+                    "value": "否"
+                  },
+                  {
+                    "label": { "labelType": "", "labelText": "供水供电" },
+                    "value": "民用"
+                  },
+                  {
+                    "label": { "labelType": "", "labelText": "停车位" },
+                    "value": "暂无"
+                  },
+                  {
+                    "label": { "labelType": "", "labelText": "物业费" },
+                    "value": "0.90"
+                  },
+                  {
+                    "label": { "labelType": "", "labelText": "停车费" },
+                    "value": "地面150.00元/月"
+                  },
+                  {
+                    "label": { "labelType": "", "labelText": "车位管理费" },
+                    "value": "暂无"
+                  },
+                  {
+                    "label": { "labelType": "", "labelText": "物业公司" },
+                    "value": "业主自管"
+                  },
+                  {
+                    "label": { "labelType": "", "labelText": "小区地址" },
+                    "value": "济宁路11号,近燕山路491号"
+                  },
+                  {
+                    "label": { "labelType": "", "labelText": "开发商" },
+                    "value": "单位自建"
+                  }
+                ]
+              }
+            ],
+            "mapImage": ""
+          },
+          {
+            "id": "00102",
+            "name": "area_02",
+            "desc": "南一路以北、济宁路以南、燕山路以西、西三路以东",
+            "community": [],
+            "mapImage": ""
+          },
+          {
+            "id": "00103",
+            "name": "elastic",
+            "desc": "弹性小区：南里社区、宁河小区、祥和小区、滨海花苑小区",
+            "community": [],
+            "mapImage": ""
+          }
+        ]
+      },
+      {
+        "name": "初中招生范围",
+        "type": "junior high school",
+        "rangeDetail": "南一路以北、济宁路以南、燕山路以西、西四路以东；济宁路以北，菏泽路以南，西二路以西，西四路以东及南里社区、祥和小区、滨海花苑小区。",
+        "rangeList": [
+          {
+            "id": "001",
+            "name": "",
+            "desc": "",
+            "community": [],
+            "mapImage": ""
+          },
+          {
+            "id": "001",
+            "name": "",
+            "desc": "",
+            "community": [],
+            "mapImage": ""
+          },
+          {
+            "id": "001",
+            "name": "",
+            "desc": "",
+            "community": [],
+            "mapImage": ""
+          }
+        ]
+      }
+    ]
+  }
+}
