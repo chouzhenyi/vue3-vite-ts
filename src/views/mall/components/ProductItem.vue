@@ -48,25 +48,24 @@ const item = rawProps.item as itemType;
     background-color: #fff;
     .over-hidden();
     .title {
-      padding: 0 .px2rem(12px) [ @rem];
-      height: .px2rem(42px) [ @rem];
-      margin-top: .px2rem(12px) [ @rem];
+      padding: 0 12px;
+      height: 42px;
+      margin-top: 12px;
       .over-hidden();
       .font14();
-      line-height: .px2rem(22px) [ @rem];
+      line-height: 22px;
       text-overflow: ellipsis;
     }
     .price-sales-tips {
-      padding: 0 .px2rem(12px) [ @rem] .px2rem(12px) [ @rem] .px2rem(12px) [
-        @rem];
-      line-height: .px2rem(18px) [ @rem];
-      margin-top: .px2rem(12px) [ @rem];
+      padding: 0 12px 12px 12px;
+      line-height: 18px;
+      margin-top: 12px;
       .font12();
       .price-color {
         color: var(--vt-c-text-red-1);
       }
       .price-num {
-        margin: 0 .px2rem(12px) [ @rem] 0 .px2rem(2px) [ @rem];
+        margin: 0 12px 0 2px;
       }
     }
   }

@@ -48,8 +48,9 @@ mobileIndexData().then((res) => {
 .footer {
   position: fixed;
   width: 100%;
-  height: .px2rem(50) [ @rem];
+  height: 50px;
   bottom: 0;
+  padding: 0;
   display: flex;
   justify-content: space-around;
   border-top: 1px solid var(--vt-c-white-soft);
@@ -57,9 +58,10 @@ mobileIndexData().then((res) => {
   .footer-item {
     display: flex;
     align-items: center;
+
     :deep(.anticon) {
       font-size: 20px;
-      margin-bottom: .px2rem(4) [ @rem];
+      margin-bottom: 4px;
     }
   }
 }
