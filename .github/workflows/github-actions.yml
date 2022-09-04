@@ -14,6 +14,7 @@ jobs:
 
       - name: Install and Build 🔧
         run: |
+          node -v
           npm i pnpm -g
           pnpm i
           pnpm run build-only
