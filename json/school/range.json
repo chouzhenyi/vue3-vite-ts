@@ -1,0 +1,66 @@
+{
+  "data": {
+    "stage": [
+      {
+        "id": "001",
+        "name": "小学招生范围",
+        "type": "primary school",
+        "rangeDetail": "济宁路以北、菏泽路以南、西二路以西、西三路以东；南一路以北、济宁路以南、燕山路以西、西三路以东及南里社区、宁河小区、祥和小区、滨海花苑小区。",
+        "rangeList": [
+          {
+            "id": "00101",
+            "name": "area_01",
+            "desc": "济宁路以北、菏泽路以南、西二路以西、西三路以东",
+            "community": [
+              {
+                "id": "0010101",
+                "name": "兴河北区",
+                "desc": "济宁路11号,近燕山路491号。",
+                "unitPrice": "5164",
+                "link": "https://dongying.anjuke.com/community/view/1091331"
+              }
+            ]
+          },
+          {
+            "id": "00102",
+            "name": "area_02",
+            "desc": "南一路以北、济宁路以南、燕山路以西、西三路以东",
+            "community": []
+          },
+          {
+            "id": "00103",
+            "name": "elastic",
+            "desc": "弹性小区：南里社区、宁河小区、祥和小区、滨海花苑小区",
+            "community": []
+          }
+        ]
+      },
+      {
+        "id": "002",
+        "name": "初中招生范围",
+        "type": "junior high school",
+        "rangeDetail": "南一路以北、济宁路以南、燕山路以西、西四路以东；济宁路以北，菏泽路以南，西二路以西，西四路以东及南里社区、祥和小区、滨海花苑小区。",
+        "rangeList": [
+          {
+            "id": "001",
+            "name": "",
+            "desc": "",
+            "community": []
+          },
+          {
+            "id": "001",
+            "name": "",
+            "desc": "",
+            "community": []
+          },
+          {
+            "id": "001",
+            "name": "",
+            "desc": "",
+            "community": []
+          }
+        ]
+      }
+    ]
+  }
+}
