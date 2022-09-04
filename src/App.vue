@@ -9,5 +9,3 @@ import { RouterView } from "vue-router";
     </transition>
   </RouterView>
 </template>
-
-<style lang="less" scoped></style>

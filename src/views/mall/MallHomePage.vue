@@ -46,7 +46,7 @@ mobileIndexData().then((res) => {
 <template>
   <div>
     <div class="header">
-      <LogoIcon :size="46" :type="1" />
+      <LogoIcon :type="0" />
       <SearchProduct @click="checkSearch" class="search" />
       <GoSign @click="checkSign" class="left-search" />
     </div>
@@ -65,7 +65,7 @@ mobileIndexData().then((res) => {
     </div>
     <a-layout-footer class="footer">
       <div class="footer-item">
-        <LogoIcon :size="46" :type="1" />
+        <LogoIcon :type="1" />
       </div>
       <div class="footer-item">
         <div>
@@ -87,15 +87,17 @@ mobileIndexData().then((res) => {
 @import "@/styles/font.less";
 .header {
   width: 100%;
+  height: 50px;
   padding: 0 10px;
   background-color: var(--vt-c-white);
   display: flex;
+  align-items: center;
   .search {
     flex: 1;
+    margin: 0 10px;
   }
   .left-search {
     width: 40px;
-    margin-left: 10px;
   }
 }
 .nav-wrapper {

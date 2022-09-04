@@ -5,7 +5,7 @@ import "ant-design-vue/dist/antd.css";
 import "amfe-flexible";
 import App from "./App.vue";
 import router from "./router";
-import "./assets/main.less";
+import "@/assets/main.less";
 
 const app = createApp(App);
 

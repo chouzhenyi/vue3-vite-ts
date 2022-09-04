@@ -2,7 +2,7 @@ import type { AxiosResponse } from "axios";
 import request from "@/scripts/utils/request";
 
 export const mobileIndexData = () => {
-  const url = "/json/taobao.json";
+  const url = "./json/taobao.json";
   return request.get(url).then((res: AxiosResponse["data"]) => {
     const result = res.model?.result || {};
     const { recommedResult } = result;

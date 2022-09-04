@@ -1,8 +1,12 @@
-import { createRouter, createWebHistory } from "vue-router";
+import {
+  createRouter,
+  createWebHistory,
+  createWebHashHistory,
+} from "vue-router";
 import HomeView from "@/views/HomeView.vue";
 
 const router = createRouter({
-  history: createWebHistory(import.meta.env.BASE_URL),
+  history: createWebHashHistory(import.meta.env.BASE_URL), // createWebHistory(import.meta.env.BASE_URL),
   routes: [
     {
       path: "/",
@@ -36,6 +40,14 @@ const router = createRouter({
       path: "/house",
       name: "house",
       component: () => import("@/views/house/IndexView.vue"),
+      redirect: "/house/houseView",
+      children: [
+        {
+          path: "/house/houseView",
+          name: "HouseView",
+          component: () => import("@/views/house/HouseView.vue"),
+        },
+      ],
     },
     {
       path: "/tool",
