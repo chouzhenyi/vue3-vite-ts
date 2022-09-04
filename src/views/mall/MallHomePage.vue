@@ -1,5 +1,7 @@
 <script lang="ts" setup>
 import { ShoppingCartOutlined, UserOutlined } from "@ant-design/icons-vue";
+import type { Ref } from "vue";
+import type { AdType, ProductItemType } from "@/scripts/types/mall";
 import LogoIcon from "@/components/icons/LogoIcon.vue";
 import { mobileIndexData } from "@/scripts/api/shop";
 import { adDataList } from "@/scripts/actions/index.action";
@@ -7,20 +9,19 @@ import ProductItem from "./components/ProductItem.vue";
 import SearchProduct from "./components/SearchProduct.vue";
 import GoSign from "./components/GoSign.vue";
 import { ref } from "vue";
-import type { Ref } from "vue";
 import { useRouter } from "vue-router";
 
 // 头部搜索、签到button
 const $router = useRouter();
 const checkSign = () => {
-  console.log("去签到");
+  console.log("去签到", $router);
 };
 const checkSearch = () => {
-  console.log("去搜索");
+  console.log("去搜索", $router);
 };
 // 广告导航
-const ads: Ref<any[]> = ref([]);
-const renderADItem = (params: any) => {
+const ads: Ref<AdType[]> = ref([]);
+const renderADItem = (params: AdType) => {
   const { id, title, link, src } = params;
   const item = {
     id,
@@ -32,12 +33,12 @@ const renderADItem = (params: any) => {
 };
 const renderADLinks = () => {
   adDataList.forEach((item) => {
-    ads.value.push(renderADItem(item));
+    ads.value.push(renderADItem(item as AdType));
   });
 };
 renderADLinks();
 // 商品列表
-const items: Ref<any[]> = ref([]);
+const items: Ref<ProductItemType[]> = ref([]);
 mobileIndexData().then((res) => {
   const { list } = res;
   items.value.push(...list);

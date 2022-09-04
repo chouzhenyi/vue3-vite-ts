@@ -1,5 +1,6 @@
 import type { AxiosResponse } from "axios";
 import request from "@/scripts/utils/request";
+import type { ProductItemType } from "@/scripts/types/mall";
 
 export const mobileIndexData = () => {
   const url = "./json/taobao.json";
@@ -8,7 +9,7 @@ export const mobileIndexData = () => {
     const { recommedResult } = result;
     const list = recommedResult[0]?.itemList;
     return {
-      list: list.map((item: any) => {
+      list: list.map((item: ProductItemType) => {
         const {
           extMap,
           marketPrice, // 售价
