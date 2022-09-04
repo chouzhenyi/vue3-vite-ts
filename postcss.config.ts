@@ -15,6 +15,7 @@ export default {
       rootValue: 37.5,
       propList: ["*"],
       unitPrecision: 5,
+      exclude: "views/tool/*",
     },
   },
 };

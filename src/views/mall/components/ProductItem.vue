@@ -1,6 +1,11 @@
 <template>
   <div class="wrapper">
-    <a-image :src="item.picUrl" class="pic" fallback="./images/default.png" />
+    <a-image
+      :src="item.picUrl"
+      class="pic"
+      fallback="./images/default.png"
+      :preview="false"
+    />
     <div class="text-wrapper">
       <div class="title">
         {{ item.title }}
