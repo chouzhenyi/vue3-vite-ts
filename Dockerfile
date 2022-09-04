@@ -1,6 +1,6 @@
-FROM node
-RUN npm i pnpm
+# FROM node
+# RUN npm i pnpm
 
-# FROM nginx
-# COPY dist/ /usr/share/nginx/html/
-# COPY nginx/default.conf /etc/nginx/conf.d/default.conf
+FROM nginx
+COPY dist/ /usr/share/nginx/html/
+COPY nginx/default.conf /etc/nginx/conf.d/default.conf
