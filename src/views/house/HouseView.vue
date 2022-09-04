@@ -45,7 +45,7 @@ import type { Community, AreaType } from "@/scripts/types/house";
 
 const activeKey = ref(0);
 const steps: Ref<AreaType[]> = ref([]);
-schoolAreaData().then((res) => {
+schoolAreaData().then((res: AreaType[]) => {
   steps.value.push(...res);
   console.log(toRaw(steps.value));
 });

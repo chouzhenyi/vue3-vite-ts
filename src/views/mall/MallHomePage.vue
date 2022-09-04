@@ -39,7 +39,10 @@ const renderADLinks = () => {
 renderADLinks();
 // 商品列表
 const items: Ref<ProductItemType[]> = ref([]);
-mobileIndexData().then((res) => {
+type ResProductItemType = {
+  list: ProductItemType[];
+};
+mobileIndexData().then((res: ResProductItemType) => {
   const { list } = res;
   items.value.push(...list);
 });
