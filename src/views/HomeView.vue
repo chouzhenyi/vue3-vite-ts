@@ -31,8 +31,12 @@ const linkData = reactive({
 
       children: [
         {
-          to: "/tool",
-          desc: "工具插件使用",
+          to: "/tool/ExcelPage",
+          desc: "读取excel",
+        },
+        {
+          to: "/tool/Tesseract",
+          desc: "图片识别",
         },
       ],
     },

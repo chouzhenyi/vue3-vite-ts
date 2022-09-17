@@ -6,9 +6,10 @@ import "amfe-flexible";
 import App from "./App.vue";
 import router from "./router";
 import "@/assets/main.less";
+import TopHeader from "@/components/common/TopHeader.vue";
 
 const app = createApp(App);
-
+app.component("TopHeader", TopHeader);
 app.use(createPinia());
 app.use(router);
 app.use(Antd);

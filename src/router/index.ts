@@ -53,11 +53,17 @@ const router = createRouter({
       path: "/tool",
       name: "tool",
       component: () => import("@/views/tool/IndexView.vue"),
+      redirect: "/tool/ExcelPage",
       children: [
         {
           path: "/tool/ExcelPage",
           name: "ExcelPage",
           component: () => import("@/views/tool/ExcelPage.vue"),
+        },
+        {
+          path: "/tool/Tesseract",
+          name: "Tesseract",
+          component: () => import("@/views/tool/TesseractPage.vue"),
         },
       ],
     },

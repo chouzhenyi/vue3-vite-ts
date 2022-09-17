@@ -2,13 +2,8 @@
 import * as xlsx from "xlsx";
 import { ref } from "vue";
 import type { Ref } from "vue";
+import FileSelect from "@/components/common/FileSelect.vue";
 
-// 上传excel
-const file = ref(null);
-const selectExcelFile = () => {
-  const el = file.value as unknown as HTMLInputElement;
-  el?.click?.();
-};
 // 解析excel数据
 type ExcelType = {
   name?: string;
@@ -33,6 +28,7 @@ const handleSheetData = (data: any): ExcelType[] => {
     },
   };
   type keyType = "A" | "B" | "C";
+  console.log(data, "data");
   for (const i in data) {
     if (/\w\d{1,}/.test(i)) {
       const val = data[i];
@@ -54,10 +50,7 @@ const handleSheetData = (data: any): ExcelType[] => {
   return rows;
 };
 // 解析excel文件
-const handleExcel = (el: Event) => {
-  const { target } = el;
-  const { files } = target as HTMLInputElement;
-  const file = (files as FileList)[0];
+const handleExcel = (file: File) => {
   const reader = new FileReader();
   reader.onload = (e) => {
     const data = e?.target?.result;
@@ -93,16 +86,12 @@ const tableData: Ref<ExcelType[]> = ref([]);
 <template>
   <div class="excel-wrapper">
     <div>
-      <a-button type="primary" @click="selectExcelFile">上传excel</a-button>
+      <FileSelect @select="handleExcel" />
     </div>
-    <input type="file" ref="file" class="hidden" @change="handleExcel" />
     <a-table :dataSource="tableData" :columns="columns" bordered />
   </div>
 </template>
 <style lang="less" scoped>
-.hidden {
-  display: none;
-}
 .excel-wrapper {
   font-size: 14px;
 }
