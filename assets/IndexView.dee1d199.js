@@ -1,0 +1,1 @@
+import{_ as n,r as e,o as c,c as r,a as o}from"./index.e68aed90.js";const s={},a={class:"wrapper"};function d(p,i){const t=e("TopHeader"),_=e("router-view");return c(),r("div",a,[o(t,{title:"\u5DE5\u5177\u5E93"}),o(_,{class:"router-view-container"})])}const u=n(s,[["render",d],["__scopeId","data-v-ddda5755"]]);export{u as default};
