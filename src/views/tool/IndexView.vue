@@ -1,16 +1,13 @@
 <script lang="ts" setup></script>
 <template>
-  <div>
+  <div class="wrapper">
     <TopHeader title="工具库" />
-    <div class="wrapper">
-      <router-view class="router-view-container"></router-view>
-    </div>
+    <router-view class="router-view-container"></router-view>
   </div>
 </template>
 <style lang="less" scoped>
 .wrapper {
-  display: flex;
   height: 100vh;
-  padding: 0 10px;
+  background-color: #f7f8f9;
 }
 </style>

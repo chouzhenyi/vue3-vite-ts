@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="file-select-wrapper">
     <a-button type="primary" @click="fileButtonClick">{{
       text || "选择文件"
     }}</a-button>
@@ -25,6 +25,11 @@ const fileSelectChange = (event: Event) => {
 };
 </script>
 <style lang="less" scoped>
+.file-select-wrapper {
+  width: 88px;
+  height: 32px;
+  font-size: 0;
+}
 .hidden {
   display: none;
 }
