@@ -67,6 +67,25 @@ const router = createRouter({
         },
       ],
     },
+
+    {
+      path: "/learn",
+      name: "learn",
+      component: () => import("@/views/learn/LearnView.vue"),
+      redirect: "/learn/LearnView",
+      children: [
+        {
+          path: "/learn/pattern/index",
+          name: "learnPattern",
+          component: () => import("@/views/learn/pattern/index.vue"),
+        },
+        {
+          path: "/learn/pattern/createMode",
+          name: "createMode",
+          component: () => import("@/views/learn/pattern/createMode.vue"),
+        },
+      ],
+    },
   ],
 });
 

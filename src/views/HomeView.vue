@@ -40,6 +40,18 @@ const linkData = reactive({
         },
       ],
     },
+
+    {
+      index: 3,
+      header: "再学习吧",
+
+      children: [
+        {
+          to: "/learn/pattern/index",
+          desc: "设计模式",
+        },
+      ],
+    },
   ],
 });
 </script>
